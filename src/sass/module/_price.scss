@@ -1,0 +1,126 @@
+@use "global" as *;
+
+.price {
+  background-color: $green2;
+  padding: rem(84) 0 rem(84);
+
+  @include mq("md") {
+    padding: rem(100) 0 rem(104);
+  }
+}
+
+.price__wrapper {
+  margin-top: rem(31);
+
+  @include mq("md") {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: rem(43);
+  }
+}
+
+.price__wrapper::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    left: calc(50% - min(48vw, rem(620)));
+    bottom: rem(-178);
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/price-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.price__img {
+  @include mq("md") {
+    width: 45.556%;
+    margin-left: rem(90);
+  }
+}
+
+.price__img source {
+  width: 100%;
+  object-fit: cover;
+}
+
+.price__img img {
+  aspect-ratio: 345 / 227;
+  width: 100%;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+  }
+}
+
+.price__contents {
+  margin-top: rem(44);
+
+  @include mq("md") {
+    margin-top: rem(4);
+    width: 45.68%;
+  }
+}
+
+.price__content + .price__content {
+  margin-top: rem(44);
+}
+
+.price__content-title {
+  color: $navy;
+  font-family: $base-font;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1;
+  padding-bottom: rem(7);
+  border-bottom: 1px solid $green;
+}
+
+.price__content-items {
+}
+
+.price__content-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(8);
+}
+
+.price__content-text {
+  color: $navy;
+  font-family: $base-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+  letter-spacing: 0;
+
+  @include mq("md") {
+    letter-spacing: 0.149em;
+  }
+}
+
+.price__content-cost {
+  color: $navy;
+  font-family: $base-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+  letter-spacing: 0;
+
+  @include mq("md") {
+    letter-spacing: 0.1em;
+  }
+}
+
+.price__btn {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

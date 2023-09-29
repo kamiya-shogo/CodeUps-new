@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.information-content {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.information-content__img {
+  @include mq("md") {
+    width: 49.991%;
+  }
+}
+
+.information-content__img img {
+  aspect-ratio: 345 / 227;
+  width: 100%;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 540 / 356;
+  }
+}
+
+.information-content__body {
+  margin-top: rem(27);
+
+  @include mq("md") {
+    width: 45.628%;
+    margin-top: rem(61);
+    margin-left: rem(48);
+  }
+}
+
+.information-content__body-title {
+  color: $navy;
+  font-family: $base-font;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1;
+  padding-bottom: rem(4);
+  border-bottom: 2px solid $green;
+
+  @include mq("md") {
+    font-size: rem(24);
+    padding-bottom: rem(7);
+  }
+}
+
+.information-content__body-text {
+  margin-top: rem(7);
+
+  @include mq("md") {
+    margin-top: rem(7);
+  }
+}
+
+.information-content__btn {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}

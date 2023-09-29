@@ -1,0 +1,124 @@
+@use "global" as *;
+
+.campaign-card {
+  background-color: $white;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.campaign-card__img {
+}
+
+.campaign-card__img img {
+  aspect-ratio: 280 / 188;
+  width: 100%;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 333 / 223;
+  }
+}
+
+.campaign-card__content {
+  padding: rem(16) rem(16) rem(24) rem(16);
+
+  @include mq("md") {
+    padding: rem(24) rem(16) rem(40);
+  }
+}
+.campaign-card__tag {
+  display: inline-block;
+  color: $green;
+  font-family: $base-font;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1;
+  padding: rem(8) rem(11);
+  border: 1px solid $green;
+
+  @include mq("md") {
+    padding: rem(10) rem(16);
+  }
+}
+
+.campaign-card__title {
+  color: $navy;
+  font-family: $base-font;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1;
+  margin-top: rem(8);
+  padding-bottom: rem(12);
+  border-bottom: 1px solid $green;
+
+  @include mq("md") {
+    padding-bottom: rem(12);
+  }
+}
+
+.campaign-card__text {
+  color: $navy;
+  font-family: $base-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(12);
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(16);
+    margin-top: rem(8);
+  }
+
+  @include mq("md") {
+    margin-top: rem(19);
+  }
+}
+
+.campaign-card__price {
+  display: flex;
+  margin-top: rem(13);
+
+  @include mq("md") {
+    margin-top: rem(12);
+  }
+}
+
+.campaign-card__price-before {
+  position: relative;
+  color: $navy;
+  font-family: $third-font;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(10);
+  margin-left: rem(19);
+
+  @include mq("md") {
+    font-size: rem(24);
+    margin-top: rem(14);
+    margin-left: rem(19);
+  }
+}
+
+.campaign-card__price-before::before {
+  position: absolute;
+  content: "";
+  top: 40%;
+  width: 102%;
+  height: rem(3);
+  background-color: $red;
+}
+
+.campaign-card__price-after {
+  color: $green;
+  font-family: $third-font;
+  font-size: rem(32);
+  font-weight: $bold;
+  line-height: 1;
+  margin-left: rem(18);
+
+  @include mq("md") {
+    font-size: rem(40);
+    margin-left: rem(26);
+  }
+}

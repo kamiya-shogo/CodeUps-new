@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.top-body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
+
+.sp-nav {
+}
+
+.sp-nav__inner {
+  display: flex;
+  padding: rem(93) rem(15) rem(90);
+}
+
+.sp-nav__left {
+  width: 50%;
+}
+
+.sp-nav__right {
+  width: 50%;
+}
+
+.sp-nav__left-items + .sp-nav__left-items,
+.sp-nav__right-items + .sp-nav__right-items {
+  margin-top: rem(16);
+}
+
+.sp-nav__left-item:first-child a,
+.sp-nav__right-item:first-child a {
+  position: relative;
+  font-weight: $bold;
+}
+
+.sp-nav__left-item:first-child a::before,
+.sp-nav__right-item:first-child a::before {
+  position: absolute;
+  content: "";
+  top: 0rem(8);
+  left: 0;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/starfish-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sp-nav__left-item a,
+.sp-nav__right-item a {
+  display: block;
+  color: $white;
+  font-family: $base-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: calc(18 / 16);
+  transition: 0.3s opacity;
+  padding: rem(12) rem(6) rem(12) rem(22);
+}
+
+.sp-nav__left-item a:hover,
+.sp-nav__right-item a:hover {
+  opacity: 0.7;
+}

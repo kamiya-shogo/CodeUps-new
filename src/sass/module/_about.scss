@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.about__content {
+  margin-top: rem(31);
+
+  @include mq("md") {
+    position: relative;
+    margin-top: rem(43);
+  }
+}
+
+.about__inner {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.about__content::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    right: calc(50% - min(48vw, rem(636)));
+    bottom: rem(0);
+    width: rem(194);
+    height: rem(194);
+    transform: translateY(50%);
+    background-image: url(../images/common/about-us-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

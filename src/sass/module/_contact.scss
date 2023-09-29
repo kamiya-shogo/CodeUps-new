@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.contact__content {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.contact__content::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    right: calc(50% - min(48vw, rem(670)));
+    top: rem(-40);
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/contact-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

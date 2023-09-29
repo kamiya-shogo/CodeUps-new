@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.campaign__inner {
+  position: relative;
+}
+
+.campaign__swiper {
+  margin-top: rem(31);
+  margin-right: calc(50% - 50vw);
+  padding-bottom: rem(10);
+
+  @include mq("md") {
+    margin-top: rem(43);
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: rem(80);
+  width: rem(80);
+}
+
+.swiper-button-prev {
+  top: 3.3%;
+  left: 76.82%;
+  opacity: 1;
+}
+
+.swiper-button-next {
+  top: 3.3%;
+  right: 1.8%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(80);
+  margin: auto;
+  width: rem(80);
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.swiper-button-prev::after {
+  background-image: url(../images/common/campaign-prev.png);
+}
+
+.swiper-button-next::after {
+  background-image: url(../images/common/campaign-next.png);
+}
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.campaign__btn {
+  text-align: center;
+  margin-top: rem(30);
+
+  @include mq("md") {
+    margin-top: rem(70);
+  }
+}

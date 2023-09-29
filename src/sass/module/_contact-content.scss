@@ -1,0 +1,126 @@
+@use "global" as *;
+
+.contact-content {
+  @include mq("md") {
+    padding: rem(80) rem(50) rem(80) rem(50);
+    background-color: $white;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    @include mq("md") {
+      padding: rem(80) rem(50) rem(75) rem(50);
+    }
+  }
+}
+
+.contact-content__wrap {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.contact-content__info {
+  padding-left: rem(25);
+  padding-right: rem(25);
+
+  @include mq("md") {
+    width: 53.251%;
+    padding-left: 0;
+    padding-right: rem(81);
+  }
+}
+
+.contact-content__logo {
+  display: block;
+  padding-bottom: rem(5);
+  border-bottom: 1px solid $green;
+
+  @include mq("md") {
+    padding-bottom: rem(7);
+  }
+}
+
+.contact-content__logo img {
+  max-width: rem(174);
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: rem(200);
+  }
+}
+
+.contact-content__desc {
+  margin-top: rem(16);
+
+  @include mq("md") {
+    display: flex;
+    margin-top: rem(24);
+  }
+}
+
+.contact-content__desc-wrap {
+  text-align: center;
+
+  @include mq("md") {
+    text-align: left;
+    width: 33.181%;
+  }
+}
+
+.contact-content__desc-text + .contact-content__desc-text {
+  margin-top: rem(4);
+}
+
+.contact-content__desc-map {
+  margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: rem(21);
+    width: 62.046%;
+  }
+}
+
+.contact-content__desc-map iframe {
+  aspect-ratio: 295 / 160;
+  width: 100%;
+
+  @include mq("md") {
+    aspect-ratio: 273 / 148;
+  }
+}
+
+.contact-content__contact {
+  margin-top: rem(36);
+  text-align: center;
+
+  @include mq("md") {
+    // width: 46.93%;
+    margin-top: 0;
+    padding-top: rem(21);
+    padding-left: rem(80);
+    border-left: 1px solid $green;
+  }
+}
+
+.section-heading__title.section-heading__title--contact {
+  font-size: rem(80);
+  line-height: 1;
+}
+
+.contact-content__contact-text {
+  color: $green;
+  font-family: $base-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(12);
+}
+
+.contact-content__contact-btn {
+  margin-top: rem(43);
+
+  @include mq("md") {
+    margin-top: rem(42);
+  }
+}
