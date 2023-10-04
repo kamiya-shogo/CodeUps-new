@@ -2,13 +2,9 @@
 
 .contact-content {
   @include mq("md") {
-    padding: rem(80) rem(50) rem(80) rem(50);
+    padding: rem(80) rem(50) rem(75) rem(50);
     background-color: $white;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-
-    @include mq("md") {
-      padding: rem(80) rem(50) rem(75) rem(50);
-    }
   }
 }
 
@@ -95,17 +91,11 @@
   text-align: center;
 
   @include mq("md") {
-    // width: 46.93%;
     margin-top: 0;
     padding-top: rem(21);
-    padding-left: rem(80);
+    padding-left: rem(82);
     border-left: 1px solid $green;
   }
-}
-
-.section-heading__title.section-heading__title--contact {
-  font-size: rem(80);
-  line-height: 1;
 }
 
 .contact-content__contact-text {

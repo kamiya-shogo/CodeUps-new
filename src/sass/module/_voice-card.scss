@@ -26,7 +26,6 @@
 .voice-card__heading-wrap {
   @include mq("md") {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
   }
 }
@@ -40,7 +39,7 @@
   margin-top: rem(2);
 
   @include mq("md") {
-    margin-top: 0;
+    margin-top: rem(19);
   }
 }
 
@@ -57,7 +56,7 @@
   margin-top: rem(3);
 
   @include mq("md") {
-    padding: rem(9) rem(16);
+    padding: rem(10) rem(15);
     margin-top: 0;
   }
 }
@@ -74,7 +73,7 @@
 
   @include mq("md") {
     font-size: rem(24);
-    margin-top: rem(11);
+    margin-top: rem(10);
     line-height: 1.385;
   }
 }

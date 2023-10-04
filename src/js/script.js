@@ -1,24 +1,15 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  //ヘッダー背景色
-  $(function () {
-    $(window).on('scroll', function (){
-      if ($('.js-top-mv').height() < $(this).scrollTop()) {
-        $('.js-header').addClass('is-color')
-      } else {
-        $('.js-header').removeClass('is-color')
-      }
-    });
-  });
-
   //ドロワーメニュー
   $(".js-hamburger,.js-sp-nav").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger,.js-body").removeClass("is-active");
+      $(".js-header").removeClass("is-color");
       $(".js-sp-nav").fadeOut();
     } else {
       $(".js-hamburger,.js-body").addClass("is-active"); /* js-body:ドロワー表示中に背景を固定し、スクロールさせない */
+      $(".js-header").addClass("is-color");
       $(".js-sp-nav").fadeIn();
     }
   });
@@ -49,8 +40,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true,
     speed: 1500,
     autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
+        delay: 1500,
+        disableOnInteraction: false,
     },
     // Optional parameters
     slidesPerView: 1.2645,
@@ -76,7 +67,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     var pagetop = $('.js-page-top');
     // ボタン非表示
     pagetop.hide();
-    // 100px スクロールしたらボタン表示
+    // スクロールしたらボタン表示
     $(window).scroll(function () {
       if ($(this).scrollTop() > $('.js-top-mv').height()) {
             pagetop.fadeIn();
@@ -94,18 +85,37 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       var scrollHeight = $(document).height();
       var scrollPosition = $(window).height() + $(window).scrollTop();
       var footHeight = $(".js-footer").innerHeight();
-      if (scrollHeight - scrollPosition <= footHeight) {
-    // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-        $(".js-page-top").css({
-          position: "absolute",
-          bottom: footHeight + 20,
-        });
-      } else {
-        $(".js-page-top").css({
-          position: "fixed",
-          bottom: "20px",
-        });
-      }
+
+      var windowWidth = window.innerWidth;
+      var breakPoint = 768;
+
+      if (windowWidth >= breakPoint) {
+        if (scrollHeight - scrollPosition <= footHeight) {
+      // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+          $(".js-page-top").css({
+            position: "absolute",
+            bottom: footHeight + 20,
+          });
+        } else {
+          $(".js-page-top").css({
+            position: "fixed",
+            bottom: "20px",
+          });
+        }
+        } else {
+          if (scrollHeight - scrollPosition <= footHeight) {
+            // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+                $(".js-page-top").css({
+                  position: "absolute",
+                  bottom: footHeight + 15,
+                });
+              } else {
+                $(".js-page-top").css({
+                  position: "fixed",
+                  bottom: "15px",
+                });
+          }
+        }
     });
   });
 

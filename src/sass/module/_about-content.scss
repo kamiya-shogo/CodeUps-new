@@ -69,13 +69,13 @@
     width: 45.45%;
     color: $white;
     font-size: rem(80);
-    line-height: calc(100 / 80);
+    line-height: 1.263;
   }
 }
 
 .about-content__body-right {
   margin-top: rem(16);
-  
+
   @include mq("md") {
     width: 45.45%;
     margin-top: 0;

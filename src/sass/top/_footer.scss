@@ -15,6 +15,14 @@
   }
 }
 
+.footer__logo a {
+  transition: opacity 0.3s;
+}
+
+.footer__logo a:hover {
+  opacity: 0.7;
+}
+
 .footer__logo img {
   width: rem(120);
 
@@ -35,6 +43,16 @@
 
 .footer__instagram-img {
   margin-left: rem(16);
+  transition: opacity 0.3s;
+}
+
+.footer__facebook-img {
+  transition: opacity 0.3s;
+}
+
+.footer__instagram-img:hover,
+.footer__facebook-img:hover {
+  opacity: 0.7;
 }
 
 .footer__facebook-img img {

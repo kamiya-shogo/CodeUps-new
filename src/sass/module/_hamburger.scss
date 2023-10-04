@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.header__hamburger {
+.hamburger {
   position: relative;
   z-index: 9000;
   top: 0;
@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.header__hamburger span {
+.hamburger span {
   position: absolute;
   left: rem(4);
   width: rem(32);
@@ -19,28 +19,28 @@
   transition: 0.3s opacity, 0.3s transform;
 }
 
-.header__hamburger span:nth-child(1) {
+.hamburger span:nth-child(1) {
   top: 34%;
 }
 
-.header__hamburger span:nth-child(2) {
+.hamburger span:nth-child(2) {
   top: 49%;
 }
 
-.header__hamburger span:nth-child(3) {
+.hamburger span:nth-child(3) {
   top: 64%;
 }
 
-.header__hamburger.is-active span:nth-child(1) {
+.hamburger.is-active span:nth-child(1) {
   width: rem(40);
   transform: translateX(rem(-4)) translateY(rem(12)) rotate(37deg);
 }
 
-.header__hamburger.is-active span:nth-child(2) {
+.hamburger.is-active span:nth-child(2) {
   opacity: 0;
 }
 
-.header__hamburger.is-active span:nth-child(3) {
+.hamburger.is-active span:nth-child(3) {
   width: rem(40);
   transform: translateX(rem(-4)) translateY(rem(-12)) rotate(-37deg);
 }

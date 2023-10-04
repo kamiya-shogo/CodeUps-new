@@ -9,12 +9,14 @@
 
 .top-mv__inner {
   height: inherit;
+  min-height: inherit;
 }
 
 .top-mv__swiper,
 .swiper-wrapper,
 .swiper-slide picture {
   height: inherit;
+  min-height: inherit;
 }
 
 .swiper-slide img {
@@ -42,11 +44,12 @@
   font-weight: $normal;
   line-height: 1;
   letter-spacing: 0.534em;
-  text-indent: 0.56em;
+  text-indent: 0.5em;
   text-transform: uppercase;
 
   @include mq("md") {
     font-size: rem(80);
+    text-indent: 0.54em;
   }
 }
 

@@ -36,7 +36,7 @@
   border: 1px solid $green;
 
   @include mq("md") {
-    padding: rem(10) rem(16);
+    padding: rem(10) rem(15);
   }
 }
 
@@ -66,16 +66,13 @@
 
   @include mq("md") {
     font-size: rem(16);
-    margin-top: rem(8);
-  }
-
-  @include mq("md") {
     margin-top: rem(19);
   }
 }
 
 .campaign-card__price {
   display: flex;
+  justify-content: center;
   margin-top: rem(13);
 
   @include mq("md") {
@@ -91,12 +88,10 @@
   font-weight: $bold;
   line-height: 1;
   margin-top: rem(10);
-  margin-left: rem(19);
 
   @include mq("md") {
     font-size: rem(24);
     margin-top: rem(14);
-    margin-left: rem(19);
   }
 }
 
@@ -119,6 +114,6 @@
 
   @include mq("md") {
     font-size: rem(40);
-    margin-left: rem(26);
+    margin-left: 1.805556vw;
   }
 }
