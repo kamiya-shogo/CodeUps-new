@@ -23,6 +23,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   function closeDrawer() {
     $(".js-hamburger,.js-body").removeClass("is-active");
+    $(".js-header").removeClass("is-color");
     $(".js-sp-nav").fadeOut();
   }
 
