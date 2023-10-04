@@ -10,7 +10,7 @@
 
 .sp-nav__inner {
   display: flex;
-  padding: rem(12) rem(15) rem(90);
+  padding: rem(12) rem(15) rem(100);
 }
 
 .sp-nav__left {
@@ -36,7 +36,7 @@
 .sp-nav__right-item:first-child a::before {
   position: absolute;
   content: "";
-  top: 0rem(8);
+  top: 0rem (8);
   left: 0;
   width: rem(18);
   height: rem(18);
