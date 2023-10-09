@@ -14,6 +14,7 @@ body {
   background-color: transparent;
   border: 1px solid $green;
   border-radius: 50%;
+  opacity: 0;
   cursor: pointer;
   transition: 0.3s opacity;
 
@@ -27,6 +28,10 @@ body {
 
 .page-top:hover {
   opacity: 0.7;
+}
+
+.page-top.is-fade {
+  opacity: 1;
 }
 
 .page-top::before {
@@ -56,4 +61,13 @@ body {
   background-color: $green;
   transform: rotate(45deg);
   transform-origin: left top;
+}
+
+.page-top.is-active {
+  position: absolute;
+  bottom: rem(756);
+
+  @include mq("md") {
+    bottom: rem(579);
+  }
 }

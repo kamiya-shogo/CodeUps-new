@@ -66,13 +66,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(function(){
     var pagetop = $('.js-page-top');
     // ボタン非表示
-    pagetop.hide();
     // スクロールしたらボタン表示
     $(window).scroll(function () {
       if ($(this).scrollTop() > $('.js-top-mv').height()) {
-            pagetop.fadeIn();
+            pagetop.addClass('is-fade');
       } else {
-            pagetop.fadeOut();
+            pagetop.removeClass('is-fade');
       }
     });
     pagetop.click(function () {
@@ -80,42 +79,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       return false;
     });
     // フッター手前でストップ
-    $(".js-page-top").hide();
     $(window).on("scroll", function () {
       var scrollHeight = $(document).height();
       var scrollPosition = $(window).height() + $(window).scrollTop();
       var footHeight = $(".js-footer").innerHeight();
 
-      var windowWidth = window.innerWidth;
-      var breakPoint = 768;
-
-      if (windowWidth >= breakPoint) {
-        if (scrollHeight - scrollPosition <= footHeight) {
+      if (scrollHeight - scrollPosition < footHeight) {
       // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-          $(".js-page-top").css({
-            position: "absolute",
-            bottom: footHeight + 20,
-          });
-        } else {
-          $(".js-page-top").css({
-            position: "fixed",
-            bottom: "20px",
-          });
-        }
-        } else {
-          if (scrollHeight - scrollPosition <= footHeight) {
-            // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-                $(".js-page-top").css({
-                  position: "absolute",
-                  bottom: footHeight + 15,
-                });
-              } else {
-                $(".js-page-top").css({
-                  position: "fixed",
-                  bottom: "15px",
-                });
-          }
-        }
+          pagetop.addClass("is-active")
+      } else {
+          pagetop.removeClass("is-active")
+      }
     });
   });
 
