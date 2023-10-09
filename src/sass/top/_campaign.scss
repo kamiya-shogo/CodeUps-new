@@ -25,7 +25,6 @@
 
 .campaign__card {
   width: rem(280);
-  height: auto;
 
   @include mq("md") {
     width: rem(333);
