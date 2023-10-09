@@ -32,7 +32,6 @@
 
 .voice-card__heading-age {
   color: $navy;
-  font-family: $base-font;
   font-size: rem(12);
   font-weight: $normal;
   line-height: 1;
@@ -46,7 +45,6 @@
 .voice-card__heading-tag {
   display: inline-block;
   color: $green;
-  font-family: $base-font;
   font-size: rem(12);
   font-weight: $normal;
   line-height: 1;
@@ -63,7 +61,6 @@
 
 .voice-card__heading-title {
   color: $navy;
-  font-family: $base-font;
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1.44;

@@ -18,13 +18,25 @@
   }
 }
 
+.campaign__cards {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.campaign__card {
+  width: rem(280);
+  height: auto;
+
+  @include mq("md") {
+    width: rem(333);
+  }
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   height: rem(80);
   width: rem(80);
   transition: opacity 0.3s;
-
-
 }
 
 .swiper-button-prev {

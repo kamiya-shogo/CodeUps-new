@@ -41,17 +41,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true,
     speed: 1500,
     autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
+      delay: 1500,
+      disableOnInteraction: false,
     },
     // Optional parameters
-    slidesPerView: 1.2645,
+    slidesPerView: 'auto',
     spaceBetween: 24,
 
     breakpoints: {
       // when window width is >= 768px
       768: {
-        slidesPerView: 3.483,
         spaceBetween: 40
       },
     },

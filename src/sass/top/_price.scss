@@ -77,7 +77,6 @@
 
 .price__content-title {
   color: $navy;
-  font-family: $base-font;
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1;
@@ -104,7 +103,6 @@
 
 .price__content-text {
   color: $navy;
-  font-family: $base-font;
   font-size: rem(14);
   font-weight: $normal;
   line-height: calc(24 / 14);
@@ -117,14 +115,16 @@
 
 .price__content-cost {
   color: $navy;
-  font-family: $base-font;
   font-size: rem(14);
   font-weight: $normal;
   line-height: calc(24 / 14);
   letter-spacing: 0;
+  margin-left: rem(25);
 
   @include mq("md") {
+    font-size: rem(16);
     letter-spacing: 0.1em;
+    margin-left: rem(45);
   }
 }
 
