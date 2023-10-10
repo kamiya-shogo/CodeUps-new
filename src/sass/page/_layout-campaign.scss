@@ -2,6 +2,7 @@
 
 .layout-campaign {
   margin-top: rem(44);
+  padding-bottom: rem(3);
 
   @include mq("md") {
     margin-top: rem(120);
