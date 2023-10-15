@@ -15,8 +15,6 @@
   border: 1px solid $green;
   background: $green;
   padding: rem(19) rem(88) rem(19) rem(39);
-  max-width: rem(202);
-  width: 100%;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.5s;
@@ -58,20 +56,32 @@
   transform: scale(1, 1);
 }
 
-.button:hover span {
-  border-bottom: 1px solid $green;
-  border-right: 1px solid $green;
+.button span {
+  position: relative;
 }
 
-.button-arrow {
+.button span::before,
+.button span::after {
   position: absolute;
-  display: inline-block;
+  top: 54%;
+  right: rem(-46);
+  height: 1px;
+  background-color: $white;
+  content: '';
+}
+
+.button span::before {
   width: rem(40);
-  height: rem(8);
-  border-bottom: 1px solid $white;
-  border-right: 1px solid $white;
-  transform: skew(45deg);
-  margin-left: rem(11);
-  top: 37%;
-  left: 53%;
+  transform: translateY(-50%);
+}
+
+.button span::after {
+  width: rem(8);
+  transform: translateY(-50%) rotate(45deg);
+  transform-origin: right center;
+}
+
+.button:hover span::before,
+.button:hover span::after {
+  background-color: $green;
 }

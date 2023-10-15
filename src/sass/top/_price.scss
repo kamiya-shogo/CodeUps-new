@@ -90,7 +90,7 @@
   }
 }
 
-.price__content-item {
+.price__content-item dl {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -123,7 +123,7 @@
 
   @include mq("md") {
     font-size: rem(16);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
     margin-left: rem(45);
   }
 }

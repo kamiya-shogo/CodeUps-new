@@ -5,10 +5,6 @@ body {
 }
 
 .page-top {
-  position: fixed;
-  z-index: 500;
-  right: rem(15);
-  bottom: rem(15);
   width: rem(48);
   height: rem(48);
   background-color: transparent;
@@ -21,17 +17,15 @@ body {
   @include mq("md") {
     width: rem(80);
     height: rem(80);
-    right: rem(20);
-    bottom: rem(20);
   }
-}
-
-.page-top:hover {
-  opacity: 0.7;
 }
 
 .page-top.is-fade {
   opacity: 1;
+}
+
+.page-top:hover.is-fade {
+  opacity: 0.7;
 }
 
 .page-top::before {
