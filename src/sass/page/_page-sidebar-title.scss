@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.page-sidebar-title {
+  position: relative;
+  color: $black;
+  font-size: rem(24);
+  font-weight: $normal;
+  padding-left: rem(74);
+  border-left: 8px solid $green;
+  height: rem(50);
+  display: flex;
+  align-items: center;
+}
+
+.page-sidebar-title::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: rem(16);
+  transform: translateY(-50%);
+  width: rem(50);
+  height: rem(50);
+  background-image: url(../images/page/page-blog-sidebar-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.page-sidebar-title:not(:first-child) {
+  margin-top: rem(80);
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.contact-thanks__content {
+  text-align: center;
+}
+
+.contact-thanks__text {
+  color: $black;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.45;
+}
+
+.contact-thanks__text:nth-child(2) {
+  margin-top: rem(36);
+}

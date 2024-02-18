@@ -12,6 +12,11 @@
   transition: 0.3s opacity;
 }
 
+
+.blog-card.blog-card--page a {
+  padding: rem(17) rem(16) rem(23) rem(16);
+}
+
 .blog-card a:hover {
   opacity: 0.7;
 }
@@ -27,7 +32,7 @@
 }
 
 .blog-card__date {
-  color: $navy;
+  color: $black;
   font-family: $english-font;
   font-size: rem(12);
   font-weight: $normal;
@@ -35,7 +40,7 @@
 }
 
 .blog-card__title {
-  color: $navy;
+  color: $black;
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1;

@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.layout-contact {
+  margin-top: rem(80);
+
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact.layout-contact--page {
+  margin-top: rem(106);
+
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact.layout-contact--blog {
+  margin-top: rem(112);
+
+  @include mq("md") {
+    margin-top: rem(145);
+  }
+}
+
+.layout-contact.layout-contact--price {
+  margin-top: rem(104);
+
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact.layout-contact--faq {
+  margin-top: rem(103);
+
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact.layout-contact--sitemap {
+  margin-top: rem(95);
+
+  @include mq("md") {
+    margin-top: rem(127);
+  }
+}

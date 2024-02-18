@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.form-checkbox label {
+  display: block;
+  @include mq(md) {
+    display: inline-block;
+  }
+}
+
+.form-checkbox label:not(:first-of-type) {
+  margin-top: rem(2);
+  @include mq(md) {
+    margin-top: rem(3);
+  }
+}
+
+.form-checkbox input {
+  display: none;
+}
+
+.form-checkbox input + span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0 0 rem(22);
+  position: relative;
+  font-size: rem(16);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.form-checkbox input + span::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  transform: translateY(-50%);
+  background: $white;
+  border: 1px solid $green;
+  display: block;
+  width: rem(14);
+  height: rem(14);
+
+  @include mq("md") {
+    top: 49%;
+  }
+}
+
+.form-checkbox.form-checkbox--consent input + span::before {
+  top: 22%;
+
+  @include mq("md") {
+    top: 49%;
+  }
+}
+
+.form-checkbox input + span::after {
+  content: "";
+  margin-top: rem(-2);
+  position: absolute;
+  top: 55%;
+  left: rem(2);
+  transform: translateY(-50%) rotate(-35deg);
+  display: block;
+  width: rem(10);
+  height: rem(5);
+  border-bottom: 2px solid $red;
+  border-left: 2px solid $red;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.form-checkbox.form-checkbox-bg input + span::after {
+  left: rem(3);
+  transform: translateY(-50%) rotate(-35deg);
+  display: block;
+  width: rem(16);
+  height: rem(8);
+
+  @include mq("md") {
+    top: 45%;
+  }
+}
+
+.form-checkbox input:checked + span::after {
+  opacity: 1;
+}

@@ -1,0 +1,33 @@
+@use "../global" as *;
+
+.page-about__body {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    position: relative;
+    margin-top: rem(120);
+  }
+}
+
+.page-about__body::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    right: calc(50% - min(48vw, rem(640)));
+    top: rem(-80);
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/contact-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.page-about__gallery {
+  margin-top: rem(43);
+
+  @include mq("md") {
+    margin-top: rem(84);
+  }
+}

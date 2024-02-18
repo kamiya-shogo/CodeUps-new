@@ -1,0 +1,51 @@
+@use "../global" as *;
+
+.card-tab__menu {
+  display: flex;
+  gap: rem(14) rem(21);
+  flex-wrap: wrap;
+
+  @include mq("md") {
+    gap: 0 rem(32);
+  }
+}
+
+.card-tab__menu-item {
+  padding: rem(10);
+  font-size: rem(14);
+  line-height: 1;
+  width: calc((100% - rem(21)) / 2);
+  color: $green;
+  border: 1px solid $green;
+  background-color: $white;
+  text-align: center;
+  cursor: pointer;
+
+  @include mq(md) {
+    min-width: rem(162);
+    width: auto;
+  }
+}
+
+.card-tab__menu-item:first-child {
+  text-transform: uppercase;
+}
+
+.card-tab__menu-item.is-active {
+  color: $white;
+  background-color: $green;
+}
+
+.card-tab__content-item.is-active {
+  display: block;
+  animation: fade 0.3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

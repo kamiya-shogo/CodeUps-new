@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.page-404 {
+  padding: rem(55) 0 rem(40) 0;
+
+  @include mq("md") {
+    padding: rem(114) 0 rem(149) 0;
+  }
+}
+
+.page-404__inner {
+  position: relative;
+}
+
+.page-404__inner::after {
+  content: "";
+  position: absolute;
+  width: rem(328.843);
+  height: rem(293.594);
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/page/404-sp-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include mq("md") {
+    background-image: url(../images/page/404-icon.png);
+    width: rem(760);
+    height: rem(700);
+    top: 51%;
+    left: -1%;
+    transform: translateY(-50%);
+  }
+}
+
+.page-404__body {
+  text-align: center;
+}
+
+.page-404__title {
+  color: $white;
+  font-family: $third-font;
+  font-size: rem(80);
+  font-weight: $normal;
+  text-indent: 0.45em;
+  letter-spacing: 0.47em;
+  line-height: 1.1;
+
+  @include mq("md") {
+    font-size: rem(160);
+    text-indent: 0.5em;
+    letter-spacing: 0.5em;
+    line-height: 1.25;
+  }
+}
+
+.page-404__text {
+  color: $white;
+  font-family: $third-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: calc(24 / 16);
+
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.page-404__btn {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

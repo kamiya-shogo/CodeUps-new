@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.form-select select {
+  padding: rem(11.5) rem(50) rem(11.5) rem(8);
+  width: 100%;
+  font-size: rem(12);
+  line-height: 1;
+  border-radius: 0;
+  border: 1px solid $green;
+  background-image: url(../images/page/contact-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: rem(15);
+  background-position: right rem(5) top rem(9);
+  appearance: none;
+  cursor: pointer;
+
+  @include mq("md") {
+    background-position: right rem(5) top rem(10);
+    padding: rem(8) rem(50) rem(8) rem(8);
+  }
+}
+
+.form-select select::-ms-expand {
+  display: none;
+}
+
+.form-select select:focus {
+  border: 1px solid $green;
+  box-shadow: none;
+  outline: none;
+}

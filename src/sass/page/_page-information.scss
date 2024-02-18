@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.page-information-tab__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: rem(19);
+}
+
+.page-information-tab__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(12);
+  font-size: rem(14);
+  line-height: 1;
+  min-width: rem(102);
+  width: fit-content;
+  color: $green;
+  background-color: $green2;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  text-align: center;
+
+  @include mq(md) {
+    min-width: rem(300);
+    width: fit-content;
+    padding: rem(13);
+    font-size: rem(24);
+  }
+}
+
+.page-information-tab__menu-item-img {
+  width: rem(64);
+  height: rem(64);
+}
+
+.page-information-tab__menu-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-information-tab__menu-item-text {
+  font-size: rem(14);
+  line-height: 1.3;
+
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: 1;
+    margin-left: rem(8);
+  }
+}
+
+.page-information-tab__menu-item.is-active {
+  color: $white;
+  background-color: $green;
+}
+
+.page-information-tab__menu-item.is-active
+  .page-information-tab__menu-item-img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(7500%)
+    hue-rotate(157deg) brightness(111%) contrast(110%);
+}
+
+.page-information-tab__content {
+  margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: rem(25);
+  }
+}
+
+.page-information-tab__content-item {
+  padding: rem(23);
+  display: none;
+  background-color: $white;
+  border: 1px solid $green;
+}
+
+.page-information-tab__content-item.is-active {
+  display: block;
+  animation: fade 0.3s;
+}
+
+.page-information-tab__content-item-body {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq("md") {
+    flex-direction: row-reverse;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

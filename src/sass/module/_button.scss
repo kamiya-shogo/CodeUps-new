@@ -7,18 +7,21 @@
 .button {
   position: relative;
   display: inline-block;
-  color: $white;
-  font-family: $english-font;
+  width: rem(202);
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1;
-  border: 1px solid $green;
-  background: $green;
-  padding: rem(19) rem(88) rem(19) rem(39);
-  white-space: nowrap;
+  padding: rem(19) 0;
   cursor: pointer;
-  transition: all 0.5s;
+  background-color: $green;
+  color: $white;
+  transition: color 0.2s;
+  border: rem(1) solid $green;
   z-index: 1;
+}
+
+.button::first-letter {
+  text-transform: uppercase;
 }
 
 .button::before {
@@ -28,14 +31,13 @@
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
-  border: 1px solid $green;
   transform: translate(rem(4), rem(4));
+  border: rem(1) solid $green;
   z-index: -2;
 }
 
 .button::after {
-  background: $white;
+  background-color: $white;
   position: absolute;
   top: 0;
   left: 0;
@@ -44,44 +46,113 @@
   height: 100%;
   transform: scale(0, 1);
   transform-origin: left top;
-  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
 
-.button:hover {
-  color: $green;
-}
-
 .button:hover::after {
-  transform: scale(1, 1);
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
 }
 
 .button span {
+  padding-right: rem(48);
   position: relative;
 }
 
-.button span::before,
+.button.button--viewmore span {
+  padding-right: rem(53);
+}
+
+.button.button--send span {
+  padding-right: rem(56);
+}
+
+.button.button--contactus span {
+  padding-right: rem(50);
+  letter-spacing: 0.04em;
+}
+
+.button.button--pagetop span {
+  padding-right: rem(60);
+}
+
 .button span::after {
+  content: "";
   position: absolute;
-  top: 54%;
-  right: rem(-46);
-  height: 1px;
-  background-color: $white;
-  content: '';
-}
-
-.button span::before {
   width: rem(40);
+  height: rem(7);
+  top: 40.74%;
   transform: translateY(-50%);
+  right: 0;
+  background-image: url(../images/common/button-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s background-color;
 }
 
-.button span::after {
-  width: rem(8);
-  transform: translateY(-50%) rotate(45deg);
-  transform-origin: right center;
+.button.button--contactus span::after {
+  width: rem(45);
 }
 
-.button:hover span::before,
 .button:hover span::after {
+  @include mq("md") {
+    background-image: url(../images/common/button-arrow-green.png);
+  }
+}
+
+.button:hover {
+  @include mq("md") {
+    color: $green;
+    opacity: 1;
+  }
+}
+
+.button__submit {
+  color: $white;
+  text-transform: capitalize;
+}
+
+.button.button--white {
+  background-color: $white;
+  color: $green;
+  transition: color 0.2s;
+  border: rem(1) solid $white;
+}
+
+.button:hover .button__submit {
+  @include mq("md") {
+    color: $green;
+    opacity: 1;
+  }
+}
+
+.button.button--white::before {
+  border: rem(1) solid $white;
+}
+
+.button.button--white::after {
   background-color: $green;
+}
+
+.button.button--white span {
+  text-transform: uppercase;
+}
+
+.button.button--white span::after {
+  background-image: url(../images/common/button-arrow-green.png);
+}
+
+.button.button--white:hover {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.button.button--white:hover span::after {
+  @include mq("md") {
+    background-image: url(../images/common/button-arrow.png);
+  }
 }

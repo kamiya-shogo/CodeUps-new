@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+  /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  -ms-overflow-style: none;
+  /*Firefoxへの対応*/
+  scrollbar-width: none;
+}

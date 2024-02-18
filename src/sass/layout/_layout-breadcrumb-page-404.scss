@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-page-404-breadcrumb {
+  margin-top: rem(85);
+
+  @include mq("md") {
+    margin-top: rem(95);
+  }
+}

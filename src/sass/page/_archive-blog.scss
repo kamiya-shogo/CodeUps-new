@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.archive-blog__inner {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.archive-blog__main {
+  @include mq("md") {
+    width: 65.371%;
+  }
+}
+
+.archive-blog__cards {
+  padding: 0 rem(6);
+
+  @include mq("md") {
+    padding: 0;
+  }
+}
+
+.archive-blog__pagenavi {
+  margin-top: rem(80);
+}
+
+.archive-blog__sidebar {
+  margin-top: rem(80);
+  padding: 0 rem(25);
+
+  @include mq("md") {
+    width: 27.223%;
+    margin-left: rem(80);
+    margin-top: 0;
+    padding: 0;
+  }
+}

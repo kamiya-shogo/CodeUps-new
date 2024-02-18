@@ -1,0 +1,132 @@
+@use "global" as *;
+
+.single-blog__inner {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.single-blog__main {
+  @include mq("md") {
+    width: 64.815%;
+  }
+}
+
+.single-blog__sidebar {
+  margin-top: rem(80);
+  padding: 0 rem(25);
+
+  @include mq("md") {
+    width: 27.223%;
+    margin-left: rem(86);
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+.single-blog__meta {
+  display: flex;
+  align-items: center;
+  padding-top: rem(3);
+
+  @include mq("md") {
+    padding-top: 0;
+    margin-top: rem(3);
+  }
+}
+
+.single-blog__date {
+  color: $black;
+  font-family: $english-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.single-blog__title {
+  color: $black;
+  font-size: rem(24);
+  font-weight: $medium;
+  line-height: 1;
+  padding-bottom: rem(7);
+  border-bottom: 2px solid $green;
+  margin-top: rem(17);
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.single-blog__mv {
+  margin-top: rem(40);
+  width: 100%;
+}
+
+.single-blog__mv img {
+  width: 100%;
+  aspect-ratio: 335/188;
+  object-fit: cover;
+}
+
+.single-blog__content {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(39);
+  }
+}
+
+.single-blog__content p {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.single-blog__content figure:not(:first-child) {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.single-blog__content ul {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.single-blog__content li {
+  position: relative;
+  padding-left: rem(27);
+}
+
+.single-blog__content li::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: rem(18);
+  height: rem(18);
+  transform: translateY(-50%);
+  background-image: url(../images/page/starfish-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.single-blog__content li:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.single-blog__pagenavi {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.inner.privacy-policy__inner {
+  @include mq("md") {
+    max-width: rem(840);
+  }
+}
+
+.privacy-policy__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  line-height: 1;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.privacy-policy__content {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: calc(32 / 16);
+  margin-top: rem(45);
+
+  @include mq("md") {
+    margin-top: rem(47);
+  }
+}
+
+.privacy-policy__list {
+  margin-top: rem(33);
+
+  @include mq("md") {
+    margin-top: rem(32);
+  }
+}
+
+.privacy-policy__item:first-child {
+  padding-left: rem(8);
+}
+
+.privacy-policy__item + .privacy-policy__item {
+  margin-top: rem(32);
+}
+
+.privacy-policy__item-numbers {
+  counter-reset: number;
+}
+
+.privacy-policy__item-number {
+  padding-left: rem(15);
+  text-indent: rem(-15);
+}
+.privacy-policy__item-number.privacy-policy__item-number--pl {
+  padding-left: rem(24);
+
+  @include mq("md") {
+    padding-left: rem(22);
+  }
+}
+
+.privacy-policy__item-number::before {
+  content: counter(number) ". ";
+  counter-increment: number;
+}
+
+.privacy-policy__conclusion {
+  margin-top: rem(32);
+}

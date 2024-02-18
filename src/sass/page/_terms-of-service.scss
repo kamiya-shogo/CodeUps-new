@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.inner.terms-of-service__inner {
+  @include mq("md") {
+    max-width: rem(840);
+  }
+}
+
+.terms-of-service__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  line-height: 1;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.terms-of-service__content {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: calc(32 / 16);
+  margin-top: rem(45);
+
+  @include mq("md") {
+    margin-top: rem(47);
+  }
+}
+
+.terms-of-service__list {
+  margin-top: rem(32);
+}
+
+.terms-of-service__item + .terms-of-service__item {
+  margin-top: rem(31);
+
+  @include mq(md) {
+    margin-top: rem(33);
+  }
+}
+
+.terms-of-service__item-numbers {
+  counter-reset: number;
+}
+
+.terms-of-service__item-number {
+  padding-left: rem(23);
+  text-indent: rem(-15);
+}
+
+.terms-of-service__item-number::before {
+  content: counter(number) ". ";
+  counter-increment: number;
+}
+
+.terms-of-service__conclusion {
+  margin-top: rem(32);
+}

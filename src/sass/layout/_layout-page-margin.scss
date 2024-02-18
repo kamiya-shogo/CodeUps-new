@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.layout-page-margin {
+  margin-top: rem(50);
+
+  @include mq("md") {
+    margin-top: rem(148);
+  }
+}
+
+.layout-page-margin.layout-page-margin--information {
+  margin-top: rem(120);
+
+  @include mq("md") {
+    margin-top: rem(148);
+  }
+}
+
+.layout-page-margin.layout-page-margin--sitemap {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(138);
+  }
+}
+
+.layout-page-margin.layout-page-margin--privacy-policy {
+  margin-top: rem(57);
+
+  @include mq("md") {
+    margin-top: rem(156);
+  }
+}
+
+.layout-page-margin.layout-page-margin--terms-of-service {
+  margin-top: rem(58);
+
+  @include mq("md") {
+    margin-top: rem(156);
+  }
+}

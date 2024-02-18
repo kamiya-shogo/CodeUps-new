@@ -64,11 +64,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   //ページトップ
   $(function(){
-    var pagetop = $('.js-page-top');
+    var pagetop = $('.js-page-top,.js-page-mv');
     // ボタン非表示
     // スクロールしたらボタン表示
     $(window).scroll(function () {
-      if ($(this).scrollTop() > $('.js-top-mv').height()) {
+      if ($(this).scrollTop() > $('.js-top-mv,.js-page-mv').height()) {
             pagetop.addClass('is-fade');
       } else {
             pagetop.removeClass('is-fade');
@@ -121,4 +121,44 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 });
 
+//タブ
+$('.js-card-tab-menu,.js-page-information-tab-menu').on('click', function () {
+  $('.js-card-tab-menu,.js-page-information-tab-menu').removeClass('is-active');
+  $('.js-card-tab-content,.js-page-information-tab-content').removeClass('is-active');
+  $(this).addClass('is-active');
+  var number = $(this).data("number");
+  $('#' + number).addClass('is-active');
+});
+});
+
+//アコーディオン
+$(function(){
+$(".js-accordion").show();
+  $('.js-page-faq-question').on('click', function () {
+      $(this).next().slideToggle();
+      $(this).toggleClass('is-open');
+  });
+});
+
+//モーダル
+$(".js-modal-open").each(function () {
+  $(this).on("click", function (e) {
+      e.preventDefault();
+      var target = $(this).data("target");
+      var modal  = document.getElementById(target);
+      $(modal).fadeIn();
+      $("html,body").css("overflow", "hidden");
+  });
+});
+$(".js-modal-close").on("click", function () {
+  $(".js-page-about-modal").fadeOut();
+  $("html,body").css("overflow", "initial");
+});
+
+$(function(){
+$(".js-toggle").show();
+  $('.js-page-sidebar-archive').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('is-open');
+  });
 });
